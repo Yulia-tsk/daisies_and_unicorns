@@ -9,7 +9,8 @@ $client->setClientId($config['GOOGLE_CLIENT_ID']);
 $client->setClientSecret($config['GOOGLE_CLIENT_SECRET']);
 $client->setRedirectUri($config['GOOGLE_REDIRECT_URI']);
 $client->addScope('email');
-$client->addScope(['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/documents']);
+$client->addScope(['https://www.googleapis.com/auth/userinfo.email', 'https://www.googleapis.com/auth/spreadsheets']);
+
 $client->setAccessType('offline');
 $authUrl = $client->createAuthUrl();
           
