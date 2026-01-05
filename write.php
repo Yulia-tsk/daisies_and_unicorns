@@ -10,7 +10,7 @@ $client->setRedirectUri($config['GOOGLE_REDIRECT_URI']);
 $client->addScope('email');
 $client->addScope(['https://www.googleapis.com/auth/userinfo.email', 
                    'https://www.googleapis.com/auth/spreadsheets',
-                   'https://www.googleapis.com/auth/drive.file']); // Add Drive scope for Picker
+                   'https://www.googleapis.com/auth/drive.readonly']); // Add Drive scope for Picker
 
 $client->setAccessType('offline');
 $authUrl = $client->createAuthUrl();
